@@ -1,0 +1,58 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: black;
+	font-size: 20px;
+}
+.nav {
+	background-color: white;
+	list-style: none;
+	text-align: right;
+	padding: 15px 0 0 0;
+	padding-right: 80px;
+
+}
+.nav li {
+	display: inline-block;
+	padding: 20px;
+	font-size: 14px;
+}
+.nav li a {
+	text-decoration: none;
+	color: black;
+}
+.nav li a:hover {
+	color: red;
+}
+.logo {
+	color: white;
+	background-color: black;
+	float: left;
+	padding: 15px;
+	margin-left: 300px;
+	padding-top: 40px;
+}
+.logo b {
+	font-size: 56px;
+	text-align: center;
+	padding: 25px;
+}
+.banner {
+	width: 100%;
+	display: block;
+}
+.banner .bannerimg {
+	background-image: url("solid3.jpg");
+	width: 100%;
+	float: left;
+	
+
+}
+.banner .bannerimg h1 {
+	background-color: white;
+	float: left;
+	margin-bottom: 50px;
+	margin-top: 5px;
+	margin-left: 300px;
+
+}

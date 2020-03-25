@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JMI-UP</title>
+	<link rel="stylesheet" type="text/css" href="indexpolycssnew.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<div class="row-1">
+
+				<div class="search">
+					<ul class="social-icons">
+						<li><i class="fab fa-facebook-f"></i></li>
+						<li><i class="fab fa-instagram"></i></li>
+						<li><i class="fab fa-linkedin-in"></i></li>
+						<li><i class="fab fa-twitter"></i></li>
+						<li><i class="fas fa-rss"></i></li>
+						<li><i class="fab fa-google-plus-g"></i></li>
+						
+					</ul>
+				</div>
+				<div class="search-bar">
+						<i class="fas fa-search" style="padding: 3px; padding-left: 10px;"></i>
+						<input type="search" name="Googlesearch" placeholder="Google Search">
+					</div>
+
+				<div class="login-register">
+					<div class="newlogin">
+
+						<a href="#" class="link1" onclick="document.getElementById('id02').style.display='block'" style="width: auto;">Register</a>
+
+						<div id="id02" class="modal1">
+							<form class="modal1-content">
+
+								<span onclick="document.getElementById('id02').style.display='none'" class="close1" title="close window">&times;</span>
+								<div class="container-register">
+									<center>
+									<h1 style="letter-spacing: 2px;">Registeration form</h1>
+									<h4>Please fill in the forms to create the account</h4>
+									<hr>
+									</center>
+
+									<label for="Name"><b>Name</b></label>
+									<input type="text" name="name" id="name" placeholder="Enter Name" required>
+
+									<label for="Email"><b>Email</b></label>
+									<input type="text" name="email" id="email" placeholder="Enter Email" required>
+
+									<label for="Password"><b>Password</b></label>
+									<input type="password" name="password" id="pass1" placeholder="Enter password (min 8 char)" required>
+
+									<label for="Password"><b>Confirm Password</b></label>
+									<input type="password" name="password" id="pass2" placeholder="Confirm Password" required>
+
+									<label for="Date of Birth"><b>Date of Birth</b></label>
+									<input type="Date" name="dob" id="dob" placeholder="Date of Birth" required>
+
+									<label for="Number"><b>Contach Number</b></label>
+									<input type="tel" name="number" id="num" placeholder="Enter Number" required value="+91">
+
+									<label for="ID card number"><b>JMI ID card Number</b></label>
+									<input type="tel" name="idnumber" id="jmi-id" placeholder="Enter your id card number" required>
+
+									<label for="Address"><b>Permanent Address</b></label>
+									<input type="text" name="Address" id="add" placeholder="Permanent Address" required>
+
+									<label>
+										<input type="checkbox" name="remember" style="margin-bottom: 15px;" >Remember me
+									</label>
+
+									<p>By creating an account you agree to our <a class="anchor" href="#"> Terms & Conditions </a></p>
+
+									<div class="buttonsboth">
+										<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn1">Cancel</button>
+										<button type="submit" class="sumbitbtn" onclick="validate()">Submit</button>
+										
+									</div>
+
+									<script type="text/javascript">
+										function validate() {
+											var name=document.getElementById('name');
+											var email=document.getElementById('email');
+											var pass1=document.getElementById('pass1');
+											var pass2=document.getElementById('pass2');
+											var con=document.getElementById('num');
+											var add=document.getElementById('add');
+											var dob=document.getElementById('dob');
+											var idcard=document.getElementById('jmi-id');
+
+
+											if (name.length==0||email.length==0||con.length==0||pass1.length==0||pass2.length==0||add.length==0||dob.length==0||jmi-id.length==0) {
+            								alert('Form not valid');
+                        						return false;
+        									}
+        									if(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.tes(email)==false) {
+									          alert('Email not valid');
+									          return false;
+									        }
+									        if(isNaN(con)||isNaN(idcard)){
+								            alert('input not valid not valid');
+								            return false;
+								        	}
+								        	if(pass1.length<1&&pass1.length>8){
+								        		alert("Password is more than 8 digit")
+								        	}
+								        	if (pass1.equals(pass2)==false) {
+								        		alert("password does not match");
+
+								        	}
+
+
+									</script>
+											<!-- 				<script>
+										var modal=document.getElementById('id02');
+
+										window.onclick = function(event){
+											if (event.target==modal) {
+												modal.style.display="none";
+											}
+										}
+									</script> -->
+									
+									
+								</div>
+
+
+								
+							</form>
+						</div>
+						
+					
+
+					<div id="id01" class="modal">
+  
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" id="email1" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="pass3" required>
+        
+      <button type="submit" onclick="validlogin()">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+var modal1 = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    if (event.target == modal1) {
+    	modal1.style.display = "none";
+    }
+}
+</script>
+
+<script type="text/javascript">
+	function validlogin() {
+
+		var email1=document.getElementById('email1');
+		var pass2=document.getElementById('pass3');
+
+		if (email1.length==0||pass3.length==0) {
+			alert('Fiels are empty');
+				return false;
+			}
+			if(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.tes(email1)==false) {
+	          alert('Email not valid');
+	          return false;
+	        }
+
+	}
+</script>
+
+
+
+					
+					<a href="#" class="link1" onclick="document.getElementById('id01').style.display='block'">Login</a>
+
+					</div>
+				</div>
+			
+			</div>
+			<div class="row-2">
+				<div class="col-1">
+					<center>
+						<!-- <h1>JAMIA</h1><h1>MILLIA</h1><h1>ISLAMIA</h1> -->
+						<h1>JAMIA MILLIA ISLAMIA</h1>
+					</center>
+					
+				</div>
+				<div class="col-2">
+					 <center>
+					<img src="logojmi.png" alt="jamia logo" title="jmi-logo">
+					 </center>
+				</div>
+				<div class="col-3">
+					<center>
+						<!-- <h1>JAMIA</h1><h1>MILLIA</h1><h1>ISLAMIA</h1> -->
+						<h1>UNIVERSITY POLYTECHNIC</h1>
+					</center>
+				</div>
+				
+			</div>
+		</div>
+		<div class="main2">
+			<nav class="navbar">
+				<div class="row-3">
+					<div class="navbar-left">
+						<a href="#">HOME</a>
+					</div>
+
+					<ul class="navbar-right">
+						<li><a href="About.html">ABOUT</a></li>
+						<li><a href="#">ADMISSION</a></li>
+						<li><a href="#">DEPARTMENTS</a></li>
+						<li><a href="#">FACULTY</a></li>
+						<li><a href="#">RESULTS</a></li>
+						<li><a href="#">CONTACT US</a></li>
+						
+					</ul>
+					
+				</div>
+				
+			</nav>
+			<div class="image-container">
+				
+				<div class="image-inside">
+					<img src="poly.jpg">
+					
+				</div>
+				
+			</div>
+
+			<div class="content1">
+				<div class="inside-content">
+					<div class="content1-heading">
+						<h1>Courses</h1>
+					</div>
+					<div class="list-of-courses">
+						<ul>
+							<li><div class="li1">
+								<div class="li11">
+									<center>
+									<a href="#"><i class="fa fa-car" aria-hidden="true"></i></a>
+									</center>
+								</div>
+								<div class="li12">
+									<center>
+										<h2><a href="#">MECHNICAL</a></h2>
+									</center>
+								</div>
+							</div></li>
+
+							<li><div class="li1">
+								<div class="li11">
+									<center>
+									<a href="#"><i class="fa fa-microchip" aria-hidden="true"></i></a>
+									</center>
+								</div>
+								<div class="li12">
+									<center>
+										<h2><a href="#">ELECTRONICS</a></h2>
+									</center>
+									
+								</div>
+							</div></li>
+
+							<li><div class="li1">
+								<div class="li11">
+									<center>
+									<a href="#"><i class="fa fa-laptop" aria-hidden="true"></i></a>
+									</center>
+								</div>
+								<div class="li12">
+									<center>
+										<h2><a href="#">COMPUTER</a></h2>
+									</center>
+									
+								</div>
+							</div></li>
+
+							<li><div class="li1">
+								<div class="li11">
+									<center>
+									<a href="#"><i class="fas fa-lightbulb" aria-hidden="true"></i></a>
+									</center>
+								</div>
+								<div class="li12">
+									<center>
+										<h2><a href="#">ELECTRICAL</a></h2>
+									</center>
+									
+								</div>
+							</div></li>
+
+							<li><div class="li1">
+								<div class="li11">
+									<center>
+									<a href="#"><i class="fa fa-building" aria-hidden="true"></i></a>
+									</center>
+								</div>
+								<div class="li12">
+									<center>
+										<h2><a href="#">CIVIL</a></h2>
+									</center>
+									
+								</div>
+							</div></li>
+
+						</ul>
+						
+					</div>
+					
+				</div>
+			</div>
+			<div class="image-container2">
+				
+				<div class="container-box1">
+					<div class="cb-3-heading-1">
+
+							<h2>News</h2>
+							
+						</div>
+						<div class="news-inside">
+							<div class="news-div">
+							<div class="date">
+								<div class="day">
+									<center>
+										<h1>20</h1>
+									</center>
+								</div>
+								<div class="month">
+									<center>
+										<h4>Oct</h4>
+									</center>
+									
+								</div>
+								<div class="year">
+									<center>
+										<h5>2018</h5>
+									</center>
+									
+								</div>
+							</div>
+							<div class="news-content">
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+							</div>
+							
+						</div>
+
+						<div class="news-div">
+							<div class="date">
+								<div class="day">
+									<center>
+										<h1>20</h1>
+									</center>
+								</div>
+								<div class="month">
+									<center>
+										<h4>Oct</h4>
+									</center>
+									
+								</div>
+								<div class="year">
+									<center>
+										<h5>2018</h5>
+									</center>
+									
+								</div>
+							</div>
+							<div class="news-content">
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+							</div>
+							
+						</div>
+
+						<div class="news-div">
+							<div class="date">
+								<div class="day">
+									<center>
+										<h1>20</h1>
+									</center>
+								</div>
+								<div class="month">
+									<center>
+										<h4>Oct</h4>
+									</center>
+									
+								</div>
+								<div class="year">
+									<center>
+										<h5>2018</h5>
+									</center>
+									
+								</div>
+							</div>
+							<div class="news-content">
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+							</div>
+							
+						</div>
+						</div>
+					<!-- <img src="bg1.jpg"> -->
+						
+					</div>
+					<div class="container-box1">
+						<div class="cb-3-heading-1">
+
+							<h2>Notice</h2>
+							
+						</div>
+
+						<div class="notice-main">
+							<div class="notice1">
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+							</div>
+							<div class="notice1">
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+							</div>
+							<div class="notice1">
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+							</div>
+							<div class="notice1">
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+							</div>
+							
+						</div>
+					<!-- <img src="bg1.jpg"> -->
+						
+					</div>
+					<div class="container-box3">
+
+						<div class="cb-3-heading-1">
+
+							<h2>Important Links</h2>
+							
+						</div>
+						<!-- <div class="content-cb-3">
+
+							<p><span>&#9830;</span>Examination result</p>
+							
+						</div> -->
+
+						<ul class="content-cb-3">
+							<li><div class="one">&#9830;</div><div class="two"><a href="#">Examination Results</a></div></li>
+							<li><div class="one">&#9830;</div><div class="two"><a href="#">Exam forms</a></div></li>
+							<li><div class="one">&#9830;</div><div class="two"><a href="http://jmi.ucanapply.com/gradecard/entrance/?app-id=UElZMDAwMDA0MA==" target="_blank">Admission Result</a></div></li>
+							<li><div class="one">&#9830;</div><div class="two"><a href="#">Admission Related Informations</a></div></li>
+							<li><div class="one">&#9830;</div><div class="two"><a href="http://jmiregular.ucanapply.com/universitysystem/student">Student Exam portal</a></div></li>
+							<li><div class="one">&#9830;</div><div class="two"><a href="https://www.jmi.ac.in/entrancetestsyllabi" target="_blank">Entrance Test Syllabus</a></div></li>
+							<li><div class="one">&#9830;</div><div class="two"><a href="http://jmi.ac.in/upload/admission/prospectus2018.pdf">Download Prospectus</a></div></li>
+							<li><div class="one">&#9830;</div><div class="two"><a href="#">Syllabus</a></div></li>
+							<li><div class="one">&#9830;</div><div class="two"><a href="#">sessional syllabus</a></div></li>
+							<li><div class="one">&#9830;</div><div class="two"><a href="#">Online Fee Payment</a></div></li>
+							<li><div class="one">&#9830;</div><div class="two"><a href="https://www.jmi.ac.in/studyatjamia/hostel/latest/1">Hostels</a></div></li>
+							<li><div class="one">&#9830;</div><div class="two"><a href="https://www.jmi.ac.in/polytechnic/workshop">Workshop</a></div></li>
+							<li><div class="one">&#9830;</div><div class="two"><a href="https://www.jmi.ac.in/upload/proforma/form_vehicle.pdf" target="_blank">Application forms for issuance of sticker for vehicle</a></div></li>
+							<li><div class="one">&#9830;</div><div class="two"><a href="https://www.jmi.ac.in/upload/admission/2018_fee_structure.pdf" target="_blank">Fee Related Information</a></div></li>
+
+
+						</ul>
+						<!-- <div class="content-cb-3">
+							<p><span>&#9830;</span>Exam Forms</p>
+						</div>
+						<div class="content-cb-3">
+							<p><span>&#9830;</span>Online Fees sumbit</p>
+						</div>
+						<div class="content-cb-3">
+							<p><span>&#9830;</span>Admission Notices</p>
+						</div>
+						<div class="content-cb-3">
+							<p><span>&#9830;</span>Student Login </p>
+						</div> -->
+					<!-- <img src="bg1.jpg"> -->
+						
+					</div>
+				
+			</div>
+			<div class="container3">
+				<div class="gallery">
+					<center>
+						<h1>Gallery</h1>
+					</center>
+					
+				</div>
+				<div class="galleryimages">
+					<ul>
+						<li><img src="C:\Users\Samar Naseem\Desktop\DESKTOP\jmi poly website\New folder\New folder\6.jpg"></li>
+						<li><img src="C:\Users\Samar Naseem\Desktop\DESKTOP\jmi poly website\New folder\New folder\3.jpg"></li>
+						<li><img src="C:\Users\Samar Naseem\Desktop\DESKTOP\jmi poly website\New folder\New folder\4.jpg"></li>
+						<li><img src="C:\Users\Samar Naseem\Desktop\DESKTOP\jmi poly website\New folder\New folder\5.jpg"></li>
+						<li><img src="C:\Users\Samar Naseem\Desktop\DESKTOP\jmi poly website\New folder\New folder\14.jpg"></li>
+						<li><img src="C:\Users\Samar Naseem\Desktop\DESKTOP\jmi poly website\New folder\New folder\10.jpg"></li>
+						<li><img src="C:\Users\Samar Naseem\Desktop\DESKTOP\jmi poly website\New folder\New folder\9.jpg"></li>
+						<li><img src="C:\Users\Samar Naseem\Desktop\DESKTOP\jmi poly website\New folder\New folder\7.jpg"></li>
+						
+					</ul>
+					
+				</div>
+				
+			</div>
+	</div>
+
+	<div class="footer">
+
+			<div class="main-footer-1">
+
+				<div class="address">
+
+					<h2>Address</h2>
+					<div class="address-1">
+					<div class="one1">
+						<i class="fas fa-map-marker-alt" style="padding: 12px; float: left;"></i>
+					</div>
+					<div class="two1">
+						<p>Jamia Millia Islamia University Polytechnic, Jamia Nagar, New Delhi Okhla - 110025</p>
+					</div>
+					</div>
+
+					<div class="address-2">
+						<div class="one1">
+						<i class="fas fa-phone-volume" style="padding: 12px; float: left;"></i>
+					</div>
+					<div class="two1">
+						<p>0141-2713494</p>
+						<p>0141-2713494</p>
+					</div>
+					</div>
+
+					<div class="address-3">
+						<div class="one1">
+						<i class="fab fa-telegram"  style="padding: 12px; float: left;"></i>
+					</div>
+					<div class="two1">
+						<p>0141-2715071</p>
+					</div>
+					</div>
+
+					<div class="address-4">
+						<div class="one1">
+						<i class="fas fa-envelope" style="padding: 12px; float: left;"></i>
+					</div>
+					<div class="two1">
+						<p>office@iiitsonipat.ac.in</p>
+					</div>
+					</div>
+					
+					
+				</div>
+
+				<div class="explore">
+
+					<h2>Explore JAMIA</h2>
+
+					<p>Campus Map</p>
+					<p>Site Map</p>
+					<p>Photo Gallery</p>
+					<p>Holiday</p>
+					<p>RTI</p>
+					
+				</div>
+
+				<div class="follow-us">
+					<h2>Follow Us</h2>
+
+					<a href="#"><i class="fab fa-facebook"></i>Facebook</a>
+					<a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+					<a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
+					<a href="#"><i class="fab fa-twitter-square"></i>Twitter</a>
+					<a href="#"><i class="fas fa-rss-square"></i>Rss</a>
+					<a href="#"><i class="fab fa-google-plus"></i>Google plus</a>
+				</div>
+
+				<div class="campus-fa">
+					<h2>Campus Facilities</h2>
+
+					<a href="#"><i class="fas fa-rupee-sign"></i>Bank</a>
+					<a href="#"><i class="fas fa-book-reader"></i>Library</a>
+					<a href="#"><i class="fas fa-utensils"></i>Canteen</a>
+					<a href="#"><i class="fas fa-male"></i>Boys Hostel</a>
+					<a href="#"><i class="fas fa-female"></i>Girls Hostel</a>
+					<a href="#"><i class="fas fa-futbol"></i>Sports</a>
+					<a href="#"><i class="fas fa-briefcase-medical"></i>Medical</a>
+					
+				</div>
+			</div>
+		</div>
+		<div class="footer-2">
+			<div class="main-footer-2">
+				<p style="float: left;">Copyright © 2018 - All Rights Reserved www.jmiunipoly.ac.in</p>
+				<a href="#">FAQs</a>
+				<a href="#">Terms & Condition</a>
+				
+			</div>
+		</div>
+</div>
+
+</body>
+</html>

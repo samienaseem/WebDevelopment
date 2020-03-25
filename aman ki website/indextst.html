@@ -1,0 +1,105 @@
+		<!DOCTYPE html>
+		<html>
+		<head>
+			<title></title>
+			<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		</head>
+
+		<style type="text/css">
+			
+			.imageDiv{
+
+				height: 625px;
+    border: 1px solid red;
+    transition: 0.3s all;
+    position: relative;
+    margin: auto;
+			}
+
+			.slides_image{
+	 position: relative;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    transition: 0.3s all;
+			}
+
+			.imageDiv img {
+    max-height: 625px;
+
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+    	.category_slider {
+    width: 70%;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    top: 50%;
+    border: 1px solid green;
+    position: absolute;
+    background-color: rgba(255,255,255,0.3)!important;
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    transition: 0.3s all;}
+
+    .slider-button {
+    padding: 12px;
+    font-family: sans-serif;}
+
+    .slider-button a {
+    text-decoration: none;
+    color: #28282b;
+    border: 2px solid #28282b;
+    padding: 8px 15px;
+    font-size: 17px;
+    border-radius: 5px;
+    letter-spacing: 1.2px;
+    transition: 0.3s all;
+    font-weight: bold;}
+
+    @media only screen and (max-width: 1100px){
+    	.imageDiv img{
+
+    		max-height: 600px;
+    	}
+
+    }
+		</style>
+		<body>
+
+			<div class="imageDiv">
+
+
+				<div class="slides_image fadee">
+					<img src="images\1280684302.jpg">
+					<div class="category_slider">
+						<h1 style="padding: 2px 10px; margin-bottom: 16px !important; cursor: pointer; letter-spacing: 3px;">Travel</h1>
+						<div class="slider-button"><a href="#">Read more</a></div>
+					</div>
+					
+				</div>
+
+				<div class="slides_image fadee">
+					<img src="images\IMG_0453.JPG">
+					<div class="category_slider">
+						<h1 style="padding: 2px 10px; margin-bottom: 16px !important; cursor: pointer; letter-spacing: 3px;">LifeStyle</h1>
+						<div class="slider-button"><a href="#">Read more</a></div>
+					</div>
+					
+				</div>
+
+
+				
+				<!-- <img src="bikee.jpg" alt="bike" title="lifestyle"> -->
+			</div>
+
+			<script src="js/imagesliderAuto.js"></script>
+		
+		</body>
+		</html>	
+

@@ -1,0 +1,40 @@
+			var account=["facebook","twitter","linkedIn","insta"];
+
+			var samie={
+				name : "samie",
+				age : 19,
+				city : "delhi",
+				acnt : account,
+
+				"number of follower" : 0,
+
+				addfollower : function(nam,acc) {
+						for(var i=0;i<account.length;i++){
+					if (account[i]==acc) {
+
+							this["number of follower"]++;
+							this["Follower" + this["number of follower"]]={
+								fname:nam,
+								faccount:acc
+							};	
+					}
+				}
+
+				},
+
+				printFollower: function() {
+
+					for (var i = 0; i < this["number of follower"]; i++) {
+						
+						console.log("follower" + (i+1));
+					}
+
+
+				}
+			};
+
+		samie.addfollower("talha","gmail");
+			console.log(samie["number of follower"])
+			console.log(samie);
+		samie.printFollower();
+		alert(samie.addfollower.nam);

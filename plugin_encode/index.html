@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Plugin</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="jquery.encode.js"></script>
+	
+</head>
+<body>
+
+	<div >
+		<h3 class="scramble">this is saquib nasseem</h3>
+		<h3 class="scramble">iam a developer</h3>
+		<button id="scramble">scramble</button>
+		<button id="unscramble">unscrmble</button>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+		$('#scramble').on('click', function(e){
+
+			$('.scramble').encode();
+
+		});
+		$('#unscramble').on('click',function(){
+			$('.scramble').decode();
+		});
+		});
+
+	</script>
+
+</body>
+</html>

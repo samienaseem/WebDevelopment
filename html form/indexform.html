@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="form.css">
+	<meta charset="utf-8">
+	<title>forms</title>
+</head>
+<body>
+	<form action="#" method="get" return="#">
+		<label>Username</label>
+		<input type="text" name="username"/>
+		<label>Password</label>
+		<input type="password" name ="password"/>
+		<textarea cols="5" rows="10" expandable="false">
+
+		</textarea>
+		<input  type ="submit" name="submit">
+		<select name="Cources">
+			<option selected="true">c</option>
+			<option>cpp</option>
+			<option>java</option>
+			<optgroup label="WD">
+				<option>html</option>
+				<option>css</option>
+				<option>jsp</option>
+			</optgroup>
+			<option selected="true">android</option>
+
+			
+		</select>
+		<button>hii</button>
+		<input type="email" name="username" pattern="[0-9]{2}">
+		<input type="url" name="username" autocomplete="samar">
+		<input type="tel" name="username" required="number">
+		<input type="number" name="username">
+		<input type="range" name="username">
+		<input type="date" name="username">
+		<input type="month" name="username">
+		<input type="week" name="username">
+		<input type="time" name="username">
+		<input type="color" name="username">
+		<input type="datetime" name="username">
+		<input type="datetime-local" name="username">
+
+
+
+		<input type="text" list="browser" placeholder="browser name">
+		<datalist id="browser" >
+			<option>chrome</option>
+			<option>ie</option>
+			<option>mozilla</option>
+			<option>opera</option>
+			
+		</datalist>
+
+		<label>male</label>
+		
+
+		<input type="checkbox"  value="male" name="gender" id="male">
+		<label>female</label>
+		<input type="checkbox" value="male" name="gender" id="female">
+
+		<label>Gender</label>
+		<label for="malegen">Male</label>
+		<input type="radio" name="gender" value="male" id="malegen">
+		<label for="femalegen">Female</label>
+		<input type="radio" name="gender" value="female" id="femalegen">
+	</form>
+
+</body>
+</html>

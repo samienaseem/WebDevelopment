@@ -1,0 +1,40 @@
+.box {
+	background-image: url(sprite.png);
+	width: 76px;
+	height: 73px;
+	border: 1px solid black;
+	border-radius: 50%;
+	transition: all 2s;
+	display: inline-block;
+	background-size: 401px;
+
+
+}
+.sprite-1{
+	background-position: 86px 194px;
+	transition: all 2s ease-in;
+}
+.sprite-1:hover {
+	transform: rotate(36000deg);
+}
+.sprite-2{
+	background-position: -22px 195px;
+}
+.sprite-2:hover {
+	transition: all 2s ;
+	transform: rotate(360deg);
+}
+.sprite-3{
+	background-position: -218px 193px;
+}
+.sprite-4{
+	background-position: 86px 285px;
+}
+.sprite-3:hover{
+	transition: all 2s ;
+	transform: rotate(360deg);	
+}
+.box:hover
+{
+	transform: rotate(36000deg);
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="newLogin.css">
+</head>
+<body>
+
+
+				<div class="login-register">
+					<div class="newlogin">
+
+						<a href="#" class="link1" onclick="document.getElementById('id02').style.display='block'" style="width: auto;">Register</a>
+
+						<div id="id02" class="modal1">
+							<form class="modal1-content">
+
+								<span onclick="document.getElementById('id02').style.display='none'" class="close1" title="close window">&times;</span>
+								<div class="container-register">
+									<center>
+									<h1 style="letter-spacing: 2px;">Registeration form</h1>
+									<h4>Please fill in the forms to create the account</h4>
+									<hr>
+									</center>
+
+									<label for="Name"><b>Name</b></label>
+									<input type="text" name="name" id="name" placeholder="Enter Name" required>
+
+									<label for="Email"><b>Email</b></label>
+									<input type="text" name="email" id="email" placeholder="Enter Email" required>
+
+									<label for="Password"><b>Password</b></label>
+									<input type="password" name="password" id="pass1" placeholder="Enter password (min 8 char)" required>
+
+									<label for="Password"><b>Confirm Password</b></label>
+									<input type="password" name="password" id="pass2" placeholder="Confirm Password" required>
+
+									<label for="Date of Birth"><b>Date of Birth</b></label>
+									<input type="Date" name="dob" id="dob" placeholder="Date of Birth" required>
+
+									<label for="Number"><b>Contach Number</b></label>
+									<input type="tel" name="number" id="num" placeholder="Enter Number" required value="+91">
+
+									<label for="ID card number"><b>JMI ID card Number</b></label>
+									<input type="tel" name="idnumber" id="jmi-id" placeholder="Enter your id card number" required>
+
+									<label for="Address"><b>Permanent Address</b></label>
+									<input type="text" name="Address" id="add" placeholder="Permanent Address" required>
+
+									<label>
+										<input type="checkbox" name="remember" style="margin-bottom: 15px;" >Remember me
+									</label>
+
+									<p>By creating an account you agree to our <a class="anchor" href="#"> Terms & Conditions </a></p>
+
+									<div class="buttonsboth">
+										<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn1">Cancel</button>
+										<button type="submit" class="sumbitbtn" onclick="validate()">Submit</button>
+										
+									</div>
+
+									<script type="text/javascript">
+										function validate() {
+											var name=document.getElementById('name');
+											var email=document.getElementById('email');
+											var pass1=document.getElementById('pass1');
+											var pass2=document.getElementById('pass2');
+											var con=document.getElementById('num');
+											var add=document.getElementById('add');
+											var dob=document.getElementById('dob');
+											var idcard=document.getElementById('jmi-id');
+
+
+											if (name.length==0||email.length==0||con.length==0||pass1.length==0||pass2.length==0||add.length==0||dob.length==0||jmi-id.length==0) {
+            								alert('Form not valid');
+                        						return false;
+        									}
+        									if(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.tes(email)==false) {
+									          alert('Email not valid');
+									          return false;
+									        }
+									        if(isNaN(con)||isNaN(idcard)){
+								            alert('input not valid not valid');
+								            return false;
+								        	}
+								        	if(pass1.length<1&&pass1.length>8){
+								        		alert("Password is more than 8 digit")
+								        	}
+								        	if (pass1.equals(pass2)==false) {
+								        		alert("password does not match");
+
+								        	}
+
+
+									</script>
+											<!-- 				<script>
+										var modal=document.getElementById('id02');
+
+										window.onclick = function(event){
+											if (event.target==modal) {
+												modal.style.display="none";
+											}
+										}
+									</script> -->
+									
+									
+								</div>
+
+
+								
+							</form>
+						</div>
+						
+					
+
+					<div id="id01" class="modal">
+  
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" id="email1" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="pass3" required>
+        
+      <button type="submit" onclick="validlogin()">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+var modal1 = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    if (event.target == modal1) {
+    	modal1.style.display = "none";
+    }
+}
+</script>
+
+<script type="text/javascript">
+	function validlogin() {
+
+		var email1=document.getElementById('email1');
+		var pass2=document.getElementById('pass3');
+
+		if (email1.length==0||pass3.length==0) {
+			alert('Fiels are empty');
+				return false;
+			}
+			if(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.tes(email1)==false) {
+	          alert('Email not valid');
+	          return false;
+	        }
+
+	}
+</script>
+
+
+
+					
+					<a href="#" class="link1" onclick="document.getElementById('id01').style.display='block'">Login</a>
+
+					</div>
+				</div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+.new iframe {
+	height: 400px;
+	width: 700px;
+	float: left;
+	display: inline-block;
+}
+
+.new1 iframe {
+	height: 400px;
+	width: 700px;
+}

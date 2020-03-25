@@ -1,0 +1,250 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: roboto;
+}
+
+.login-register {
+    width: 13%;
+    height: 40px;
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+
+    /*bottom: -355px;*/
+
+  
+}
+.newlogin {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	padding: 5px;
+	/*text-align: right;*/
+}
+.newlogin .link1 {
+	color: black;
+	padding: 5px;
+	text-decoration: none;
+	padding-left: 15px;
+	padding-right: 15px;
+	/*text-align: right;*/
+	text-shadow: 1px 1px 5px #28282b;
+	letter-spacing: 2px;
+	float: left;
+}
+.newlogin .link1:hover {
+	color:white;
+}
+.newlogin .link1:nth-child(1) {
+	
+	border-right: 2px solid black;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 100; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+    margin: auto;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 30%; 
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: -20px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+.modal1 {
+	display: none;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	position: fixed;
+	z-index: 100;
+	 background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    overflow: auto;
+	padding-top: 60px;
+}
+.modal1-content {
+	width: 70%;
+	margin: 5% auto 15% auto;
+	background-color: #fefefe;
+	height: 830px;
+	border: 1px solid black;
+	position: relative;
+}
+.close1{
+	position: absolute;
+	top: 0px;
+	right: 20px;
+	z-index: 1;
+	font-size: 40px;
+
+}
+.close1:hover {
+	color: red;
+	cursor: pointer;
+}
+hr {
+	margin-bottom: 25px;
+}
+.container-register {
+	width: 100%;
+	height: 100%;
+	padding: 12px 35px;
+	/*border: 1px solid red;*/
+	position: relative;
+
+}
+#dob, #num, #jmi-id {
+	margin-left: 6px;
+	padding: 15px;
+	margin-right: 10px;
+	margin-bottom: 22px;
+	border: none;
+	margin-top: 5px;
+    background: #f1f1f1;
+}
+#num, #jmi-id {
+	padding: 15px;
+}
+#jmi-id {
+	width: 22%;
+
+}
+#jmi-id{
+	margin-right: 0px;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+.anchor {
+	color:black;
+}
+.anchor:hover {
+	color:black;	
+}
+.cancelbtn1, .sumbitbtn {
+	width: 50%;
+	float: left;
+	margin: 25px 0px;
+}
+.cancelbtn1 {
+	 padding: 14px 20px;
+    background-color: #f44336;
+}

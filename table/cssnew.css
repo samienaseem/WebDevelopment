@@ -1,0 +1,35 @@
+table {
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+table,td,th {
+	border:2px solid red;
+	border-collapse: collapse;
+}
+
+tbody tr:hover:last-child {
+	background-color: green;
+
+}
+tbody tr:hover:first-child {
+	background-color: red;
+}
+
+tbody tr:hover:nth-child(odd) {
+	background-color: blue;
+}
+tbody tr:hover:nth-child(even) {
+	background-color: orange;
+}
+caption {
+	caption-side: bottom;
+}
+table thead th:nth-child(1){
+	width: 40%;
+
+}
+table thead th :nth-child(2),table thead th :nth-child(3) {
+	width: 30%;
+
+}

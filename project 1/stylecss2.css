@@ -1,0 +1,209 @@
+body {
+	background-image: url(back.jpg);
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.main {
+	height: auto;
+	width: 900px;
+	position: relative;
+	margin: auto;
+/*	background-color: #5d2b18*/
+}
+.upperheader {
+	width: 900px;
+	color: white;
+	height: 70px;
+	/*background-color: white;*/
+	position: relative;
+
+}
+.upperheader ul li img {
+	width: 20px;
+	height: 20px;
+	margin-left: -25px;
+}
+.upperheader ul {
+	      list-style: none;
+    /* float: right; */
+    margin: 0px;
+    height: 30px;
+    /* margin-top: 44px; */
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.upperheader img {
+	height: 50px;
+	width: 150px;
+	float: left;
+	/*margin-bottom: 40px;*/
+	position: absolute;
+}
+.upperheader ul li {
+	display: inline-block;
+	padding: 5px;
+}
+.upperheader ul li a {
+	font-size: 12px;
+	margin-left: 25px;
+}
+.header {
+	margin: 0px;
+	height: 300px;
+	width:900px;
+	background-color: grey;
+	position: relative;
+}
+.navbar {
+	background-color: #5151e0;
+	margin: 0px;
+	width: 900px;
+	position: relative;
+	height: 38px;
+}
+.navbar ul {
+	margin: 0px;
+	float: : left;
+	list-style: none;
+	color: white;
+	padding: 0px;
+	margin-left: 22px;
+	position: absolute;
+}
+.navbar ul li {
+	display: inline-block;
+	padding: 10px;
+	margin-right: 50px;
+	text-align: center;
+
+}
+.navbar ul li:hover{
+	color: red;
+}
+.content {
+	background-color: white;
+	width: 900px;
+	height: auto;
+	position: relative;
+}
+.upcontent {
+	height: 235px;
+	position:relative;
+}
+.box1 {
+	height: 180px;
+	width: 200px;
+	position: absolute;
+	background-color: black;
+	top: 20px;
+	left: 32px;
+}
+.upcontent h3 {
+	margin-top: 30px;
+	margin-bottom: 10px;
+	margin-right: 0px;
+	margin-left: 0px;
+	float: left;
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 300px;
+
+
+}
+.upcontent h6 {
+	margin: 0px;
+    display: block;
+    width: 500px;
+    /* float: left; */
+    margin-right: 75px;
+    margin-top: 10px;
+    font-size: 17px;
+    padding: 0px;
+    position: absolute;
+    right: 25px;
+    top: 55px;
+
+
+}
+.downcontent {
+	width: 900px;
+	height: 400px;
+	position: relative;
+}
+.downcontent p {
+	text-decoration: underline;
+	margin: 0px;
+	font-size: 17px;
+	padding: 8px;
+	margin-left: 22px;
+	font-weight: bold;
+}
+.contentimage {
+	height: 180px;
+	position: relative;
+}
+.contentimage ul {
+	margin: 0px;
+	list-style: none;
+	padding: 0px;
+	margin-left: 30px;
+	margin-top: 10px;
+	position: absolute;
+
+}
+.contentimage ul li {
+	display: inline-block;
+	margin-right: 32px;
+	height: 160px;
+	width: 180px;
+	background-color: coral;
+}
+.contentimage1 {
+	height: 170px;
+	position: relative;
+} 
+.contentimage1 ul {
+	padding: 0px;
+	margin-left: 30px;
+	padding-top: 3px;
+	list-style: none;
+	position: absolute;
+}
+.contentimage1 ul li {
+	display: inline-block;
+	margin-right: 32px;
+	height: 160px;
+	width: 180px;
+	background-color: coral;
+}
+.footer {
+	width: 900px;
+	height: 100px;
+	background-color: grey;
+	font-size: 10px;
+	color: white;
+	position: relative;
+}
+.leftside {
+	width: 400px;
+	margin-left: 22px;
+	float: left;
+	position: relative;
+}
+.leftside p {
+	margin: 0px;
+	padding: 10px;
+	padding-top: 20px;
+}
+.rightside {
+	width: 400px;
+	float: right;
+	margin-right: 30px;
+	position: relative;
+}
+.rightside p {
+	margin-top: 20px;
+}

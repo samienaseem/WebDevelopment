@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FirebaseTest</title>
+</head>
+
+<style type="text/css">
+	
+	*{
+		box-sizing: border-box;
+		margin: 0px;
+		padding: 0px;
+
+	}
+	.main{
+		width: 100%;
+		
+	}
+	.inside{
+
+		height:600px;
+		margin: auto;
+		width: 40%;
+		border: 2px solid red;
+		position: absolute;
+		border-radius: 30px;
+		top: 0px;
+		bottom: 0px;
+		padding:20px;
+		left: 0px;
+		right: 0px;
+	}
+	.one1 {
+
+			width: 100%;
+			margin: 10px 0px 10px 0px;
+			height: 30px;
+			text-align: center;
+
+	}
+	.two2 {
+
+		width: 100px;
+		background-color: maroon;
+		color: white;
+		height: 50px;
+		text-align: center;
+		padding: 5px;
+		margin-top: 20px;
+
+
+	}
+	.images{
+
+		height: 340px;
+		width: 50%;
+		border: 2px solid red;
+		float: right;
+
+	}
+	.images img {
+		height: 100%;
+		width: 100%;
+	}
+</style>
+<body>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+
+<script type="text/javascript">
+	
+	
+	
+</script>
+
+	<div class="main">
+
+		<div class="inside">
+
+			<input type="text" name="username" id="one" class="one1" placeholder="username">
+			<input type="email" name="email" id="two" class="one1" placeholder="email">
+			<input type="number" name="number" id="the" class="one1" placeholder="number">
+			<input type="file" name="file" id="imageip" class="one1" accept="image" onchange="loadFile(event)">
+			<input type="button" name="okie" value="go" class="two2" onclick="writeuser()">
+			<input type="button" name="downlaod" value="download" onclick="downloadImage()">
+			<input type="button" name="next_images" value="next" onclick="nextList()">
+
+			<article class="images" id="im">
+
+				<img src="" alt="image" id="imageee">
+			</article>
+			
+		</div>
+		
+	</div>
+
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+	var upimg,first;
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAJAto8nv4dQdj_67V10BQZS3MuZOtDm8M",
+    authDomain: "fir-web-20f45.firebaseapp.com",
+    databaseURL: "https://fir-web-20f45.firebaseio.com",
+    projectId: "fir-web-20f45",
+    storageBucket: "gs://fir-web-20f45.appspot.com/",
+    messagingSenderId: "731110077727",
+    appId: "1:731110077727:web:12278cee097d7ff9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  /*function downloadImage(){
+  	var d= document.getElementById("imageip").files[0];
+  //	alert(d.name);
+
+  	var storgae=firebase.storage().ref("samie").child("photos");
+  	storgae.getDownloadURL().then(function(url){
+
+  		
+  		alert(url);
+  		var imgss =document.getElementById("imageee");
+  		imgss.src=url;
+  	
+
+  	});
+
+
+  }*/
+ /* function downloadImage() {
+
+  	var storgae=firebase.storage().ref("samie").child("photos").listAll().then(function(res){
+  		res.items.forEach(function(itemref){
+		itemref.getDownloadURL().then(function(url){
+			alert(url);
+			var imgss =document.getElementById("imageee");
+  		imgss.src=url;
+		})	
+  		
+  		})
+  		
+  	});
+  }*/
+
+  async function downloadImage(){
+   //	alert("hq");
+
+  	var storgae=firebase.storage().ref("samie").child("photos");
+
+  	 first= await storgae.list({
+  		maxResults:2
+  	});
+  	alert(first.items)
+
+  	first.items.forEach(function(itemref){
+
+  		itemref.getDownloadURL().then(function(url){
+
+  			var ig=document.getElementById("im");
+  			.src=url;
+
+  		})
+  		/*alert(itemref);*/	
+  	})
+  
+  	
+  }
+
+  	 async function nextList(){
+  	 	var storgae=firebase.storage().ref("samie").child("photos");
+
+  		if (first.nextPageToken) {
+
+  		var second=await storgae.list({
+  			maxResults:2,
+  			pageToken:first.nextPageToken,
+  		})
+
+  		alert(second.items);
+  	}
+
+  	}
+  		
+  	
+
+
+
+  	
+
+  	/*first.then(function(res){
+  		alert(res.items);
+  	})
+*/
+
+  
+
+
+  
+
+  function writeuser() {
+
+  	var v=confirm("are you sure");
+
+  	//alert("hello");
+
+  	
+var base = firebase.database().ref();
+var storgae=firebase.storage().ref("samie").child("photos");
+		
+		var a=document.getElementById("one").value;
+		var b=document.getElementById("two").value;
+		var c=document.getElementById("the").value;
+		var d= document.getElementById("imageip").files[0];
+		
+		var metadata={
+			contentType:'image/jpeg'
+		};
+
+		var file=d
+		var id=storgae.child(d.name).put(d);
+		var imgss =document.getElementById("imageee");
+		imgss.src="";
+
+		/*var upload=storgae.put("A:\9feb\IMG_4391.JPG");*/
+		
+
+
+		//var img=document.getElementById("imageip").value;
+
+		//alert(img);
+
+			//document.getElementById("imageee").src='img';
+		/*base.child('user').set({
+			username:a,
+			email:b,
+			number:c		});*/	
+	}
+
+	function loadFile(argument) {
+					//var asa=document.getElementById("imageip").value;
+			//alert(argument);
+			// body...
+			var imgss =document.getElementById("imageee");
+			imgss.src=URL.createObjectURL(argument.target.files[0]);
+			upimg=imgss;
+		}
+</script>
+
+<script type="text/javascript">
+	
+
+</script>
+
+</body>
+</html>
